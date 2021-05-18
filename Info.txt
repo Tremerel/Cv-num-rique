@@ -1,0 +1,11 @@
+Pour expliquer briavement, j'ai d'abord structuré l'ensemble de 
+ma page en différente section, ensuite à l'aide de tuto, que j'ai d'abord copier dans
+ des fichier annexe en ecrivant à la mains chaque ligne pour les faire fonctionné et 
+les comprendres. Ensuite en les récrivant et en les adaptant pour chaque section et 
+selon mes envies.
+
+Je n'ai pas encore essayer de le faire responsive, mais j'ai regardé plusieur tuto 
+pour voir le fonctionnement mais voyant que je ne pourrais pas le maitriser je me 
+suis plus attardé sur du html css basic.
+
+Voila je n'ai pas encore ajouter le contenue car il est encore sur papier.

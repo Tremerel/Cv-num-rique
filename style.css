@@ -1,0 +1,356 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(odd) {
+  background: #ccc;
+}
+
+ul {
+  width: 100%;
+  background: #363f45;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  letter-spacing: 0;
+  display: flex;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: #fff;
+  line-height: 50px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: black;
+  background: white;
+  border: 2px solid white;
+  border-radius: 2px;
+  box-shadow: 2px 2px 4px #000000;
+}
+/* Présentation */
+
+#sec1 {
+  background: #5e7c88;
+  justify-content: center;
+  align-items: center;
+}
+.container2 {
+  width: 1300px;
+  min-height: 525px;
+  background: #fff;
+  margin: 70px auto 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 2px;
+}
+
+.profil {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: #feb41c;
+  width: 400px;
+
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+/* Formation */
+
+.container {
+  width: 1300px;
+  min-height: 525px;
+  background: #fff;
+  margin: 70px auto 0;
+  border-radius: 2px;
+}
+
+.container .box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 50px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.container .box .imgbox {
+  position: relative;
+  overflow: hidden;
+}
+.container .box .imgbox img {
+  max-width: 100%;
+  transition: transform 2s;
+}
+.container .box:hover .imgbox img {
+  transform: scale(1.2);
+}
+.container .box .detail {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  transform: scaleY(0);
+  transition: transform 0.5s;
+}
+.container .box:hover .detail {
+  transform: scaleY(1);
+}
+.container .box .detail .contents {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
+  color: #feb41c;
+}
+.container .box .detail .contents h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+.container .box .detail .contents p {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+/*Savoir etre */
+#img5 {
+  width: 500px;
+  height: 500px;
+  background: #fff;
+  margin: 20px;
+}
+#img4 {
+  max-width: 100%;
+}
+#container3 {
+  width: 500px;
+  min-height: 500px;
+  background: #feb41c;
+  margin: 20px;
+  border-radius: 2px;
+}
+/* Compétence */
+
+#sec3 {
+  background: #5e7c88;
+}
+.container4 {
+  width: 1400px;
+  min-height: 500px;
+  background: #fff;
+  margin: 70px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 2px;
+}
+.container4 .box2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.circle {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  margin-left: 100px;
+  margin-top: 25px;
+  font-size: 1.2vw;
+  transform-style: preserve-3d;
+}
+.circle .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 2px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: 1s ease-in-out;
+  transform: perspective(500px) rotateY(0deg);
+}
+.circle .face img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.circle:hover .face.front {
+  transform: perspective(500px) rotateY(180deg);
+}
+.circle .face.back {
+  background: #feb41c;
+  color: ivory;
+  border: 2px solid black;
+  border-radius: 2px;
+  transform: perspective(500px) rotateY(180deg);
+  animation: animate 5s linear;
+}
+.circle:hover .face.back {
+  transform: perspective(500px) rotateY(360deg);
+}
+@keyframes animate {
+  0% {
+    background-color: #5e7c88;
+    background-position: left 0px top 100px;
+  }
+}
+@keyframes animate {
+  20% {
+    background-color: #5e7c88;
+    background-position: left 0px top 80px;
+  }
+}
+@keyframes animate {
+  40% {
+    background-color: #5e7c88;
+    background-position: left 0px top 60px;
+  }
+}
+@keyframes animate {
+  60% {
+    background-color: #5e7c88;
+    background-position: left 0px top 40px;
+  }
+}
+@keyframes animate {
+  80% {
+    background-color: #5e7c88;
+    background-position: left 0px top 20px;
+  }
+}
+@keyframes animate {
+  100% {
+    background-color: #5e7c88;
+    background-position: left 0px top 0px;
+  }
+}
+
+/* Centre d'intérêts - carte */
+
+#sec5 {
+  background: #5e7c88;
+}
+.centrer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.container .card {
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background: #feb41c;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 5);
+  transition: 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.container .card:hover {
+  height: 420px;
+}
+
+.container .card .imgBx {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 0.2);
+}
+.container .card .imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 10px;
+  transition-delay: 0.1s;
+}
